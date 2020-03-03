@@ -1,4 +1,6 @@
-# charts
+# ngx-charts integration sample
+
+This application demonstrates [ngx-charts](https://github.com/swimlane/ngx-charts) on frontend side and on backend side.
 
 This application was generated using JHipster 6.5.1, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.5.1](https://www.jhipster.tech/documentation-archive/v6.5.1).
 
