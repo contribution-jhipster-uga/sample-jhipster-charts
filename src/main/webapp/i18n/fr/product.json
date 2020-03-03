@@ -2,25 +2,25 @@
   "chartsApp": {
     "product": {
       "home": {
-        "title": "Products",
-        "createLabel": "Créer un nouveau Product",
-        "createOrEditLabel": "Créer ou éditer un Product",
-        "notFound": "Aucun Product trouvé"
+        "title": "Produits",
+        "createLabel": "Créer un nouveau produit",
+        "createOrEditLabel": "Créer ou éditer un produit",
+        "notFound": "Aucun produit trouvé"
       },
-      "created": "Un nouveau Product a été créé avec l'identifiant {{ param }}",
-      "updated": "Le Product avec l'identifiant {{ param }} a été mis à jour",
-      "deleted": "Le Product avec l'identifiant {{ param }} a été supprimé",
+      "created": "Un nouveau produit a été créé avec l'identifiant {{ param }}",
+      "updated": "Le produit avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le produit avec l'identifiant {{ param }} a été supprimé",
       "delete": {
-        "question": "Etes-vous certain de vouloir supprimer le Product {{ id }} ?"
+        "question": "Etes-vous certain de vouloir supprimer le produit {{ id }} ?"
       },
       "detail": {
-        "title": "Product"
+        "title": "Produit"
       },
-      "name": "Name",
-      "country": "Country",
-      "color": "Color",
-      "quantity": "Quantity",
-      "price": "Price",
+      "name": "Nom",
+      "country": "Pays",
+      "color": "Couleur",
+      "quantity": "Quantité",
+      "price": "Prix",
       "date": "Date"
     }
   }

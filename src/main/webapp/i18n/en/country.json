@@ -2,11 +2,11 @@
   "chartsApp": {
     "Country": {
       "null": "",
-      "BELGIUM": "BELGIUM",
-      "FRANCE": "FRANCE",
-      "ITALY": "ITALY",
-      "GERMANY": "GERMANY",
-      "SPAIN": "SPAIN"
+      "BELGIUM": "Belgium",
+      "FRANCE": "France",
+      "ITALY": "Italy",
+      "GERMANY": "Germany",
+      "SPAIN": "Spain"
     }
   }
 }
