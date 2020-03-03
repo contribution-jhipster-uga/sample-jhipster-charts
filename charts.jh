@@ -1,0 +1,28 @@
+
+enum Color {
+  RED,
+  YELLOW,
+  GREEN,
+  BLUE,
+  CYAN,
+  BLACK,
+  WHITE
+}
+
+enum Country {
+  BELGIUM,
+  FRANCE,
+  ITALY,
+  GERMANY,
+  SPAIN
+}
+
+entity Product {
+  name String required,
+  country Country required,
+  color Color required,
+  quantity Integer min(1),
+  price Float min(0),
+  date Instant required
+}
+
