@@ -1,0 +1,20 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="chartsApp.chart.home.title">Chart</span>
+    </h2>
+    <jhi-alert-error></jhi-alert-error>
+    <jhi-alert></jhi-alert>
+    <br />
+
+    <div>
+
+        <ngx-charts-area-chart-stacked [view]="view" [scheme]="colorScheme" [legend]="legend"
+            [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxis]="xAxis" [yAxis]="yAxis"
+            [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" [timeline]="timeline" [results]="chart.multi"
+            (select)="onSelect($event)">
+
+        </ngx-charts-area-chart-stacked>
+
+    </div>
+
+</div>
