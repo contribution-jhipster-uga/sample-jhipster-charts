@@ -1,14 +1,14 @@
 package sample.charts.repository;
-import sample.charts.domain.Product;
-import org.springframework.data.jpa.repository.*;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import sample.charts.domain.Product;
 
 /**
- * Spring Data  repository for the Product entity.
+ * Spring Data repository for the Product entity.
  */
-@SuppressWarnings("unused")
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
-
+	
 }
