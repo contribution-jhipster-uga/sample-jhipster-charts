@@ -26,7 +26,7 @@ export const chartRoute: Routes = [
     path: ':id',
     component: ChartComponent,
     resolve: {
-      annonce: ChartResolve
+      chart: ChartResolve
     },
     data: {
       authorities: ['ROLE_USER'],

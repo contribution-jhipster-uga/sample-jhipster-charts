@@ -6,6 +6,7 @@ import { JhiEventManager } from 'ng-jhipster';
 import { ChartService } from './chart.service';
 
 import { IChart } from 'app/shared/model/chart-model';
+import { ActivatedRoute } from '@angular/router';
 
 // A voir l'exemple https://github.com/swimlane/ngx-charts/blob/master/src/app/app.component.ts
 
@@ -25,36 +26,32 @@ export class ChartComponent implements OnInit, OnDestroy {
   yAxis = true;
   showYAxisLabel = true;
   showXAxisLabel = true;
-  xAxisLabel = 'Mois';
-  yAxisLabel = "Chiffre d'affaire";
+  xAxisLabel = 'Year';
+  yAxisLabel = 'Total';
   timeline = true;
 
   colorScheme = {
     domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
   };
 
-  constructor(protected chartService: ChartService, protected eventManager: JhiEventManager) {}
+  constructor(protected activatedRoute: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.activatedRoute.data.subscribe(({ chart }) => {
+      this.chart = chart;
+    });
+  }
+
+  ngOnDestroy(): void {
+    // throw new Error("Method not implemented.");
+  }
+
+  previousState() {
+    window.history.back();
+  }
 
   // chart select event
   onSelect(event) {
     console.debug(event);
-  }
-
-  load(id: number) {
-    this.chartService.find(id).subscribe((res: HttpResponse<IChart>) => {
-      return this.processChart(res.body, res.headers);
-    });
-  }
-
-  protected processChart(chart: IChart, headers: HttpHeaders) {
-    this.chart = chart;
-  }
-
-  ngOnInit() {
-    this.load(1);
-  }
-
-  ngOnDestroy() {
-    //
   }
 }
