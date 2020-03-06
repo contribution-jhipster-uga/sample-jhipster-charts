@@ -4,9 +4,10 @@ import { Resolve, ActivatedRouteSnapshot, Routes } from '@angular/router';
 import { UserRouteAccessService } from 'app/core/auth/user-route-access-service';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { ChartComponent } from './chart.component';
 import { IChart, Chart } from 'app/shared/model/chart-model';
 import { ChartService } from './chart.service';
+
+import { ChartComponent } from './chart.component';
 
 @Injectable({ providedIn: 'root' })
 export class ChartResolve implements Resolve<IChart> {

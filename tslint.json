@@ -3,6 +3,7 @@
   "rules": {
     "directive-selector": [true, "attribute", "jhi", "camelCase"],
     "component-selector": [true, "element", "jhi", "kebab-case"],
+    "no-console": [false, "log", "error", "debug"],
     "no-inputs-metadata-property": true,
     "no-outputs-metadata-property": true,
     "no-host-metadata-property": true,
