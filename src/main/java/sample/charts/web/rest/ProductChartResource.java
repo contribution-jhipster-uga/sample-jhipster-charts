@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import sample.charts.repository.BubbleSerieEntryProjection;
 import sample.charts.repository.MultiSerieEntryProjection;
 import sample.charts.repository.ProductChartRepository;
 import sample.charts.repository.SerieEntryProjection;
+import sample.charts.service.dto.BubbleSerieEntry;
 import sample.charts.service.dto.ChartDTO;
 import sample.charts.service.dto.MultiSerieEntry;
 import sample.charts.service.dto.SerieEntry;
@@ -47,7 +49,7 @@ public class ProductChartResource {
 
 		if (id == 1) {
 			// MULTI
-			ChartDTO chartDTO = new ChartDTO();			
+			ChartDTO chartDTO = new ChartDTO();
 			List<MultiSerieEntryProjection> ml = productChartRepository.sumPricePerCountryAndYear();
 			chartDTO.setMulti(MultiSerieEntry.convertFrom(ml));
 			return ResponseEntity.ok().body(chartDTO);
@@ -55,11 +57,17 @@ public class ProductChartResource {
 			// SINGLE
 			ChartDTO chartDTO = new ChartDTO();
 			List<SerieEntryProjection> l = productChartRepository.sumPricePerCountry();
-			chartDTO.setSingle(SerieEntry.convertFrom(l));			
+			chartDTO.setSingle(SerieEntry.convertFrom(l));
 			return ResponseEntity.ok().body(chartDTO);
 		} else {
 			// TODO BUBBLE
-			return null;
+            ChartDTO chartDTO = new ChartDTO();
+            List<BubbleSerieEntryProjection> bl = productChartRepository.sumPriceAndQuantityPerCountryAndYear();
+            chartDTO.setBubble(BubbleSerieEntry.convertFrom(bl));
+            return  ResponseEntity.ok().body(chartDTO);
+
+
+			//return null;
 		}
 	}
 }

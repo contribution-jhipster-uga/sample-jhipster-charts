@@ -23,7 +23,7 @@ public interface ProductChartRepository extends JpaRepository<Product, Long> {
 			+ "FROM product "
 			+ "GROUP BY country ", nativeQuery = true)
 	List<SerieEntryProjection> sumPricePerCountry();
-	
+
 	/**
 	 *  sum Price Per Country And Year
 	 * @return a list of MultiSerieEntryProjection
@@ -32,5 +32,10 @@ public interface ProductChartRepository extends JpaRepository<Product, Long> {
 			+ " FROM product p"
 			+ " GROUP BY p.country, YEAR(p.date)", nativeQuery = true)
 	List<MultiSerieEntryProjection> sumPricePerCountryAndYear();
+
+	@Query(value ="SELECT p.country as serieName, YEAR(p.date) as name, SUM(p.price) as x, SUM(p.quantity) as y"
+        + " FROM product p"
+        + " GROUP BY p.country, YEAR(p.date)",nativeQuery = true)
+    List<BubbleSerieEntryProjection> sumPriceAndQuantityPerCountryAndYear();
 
 }
