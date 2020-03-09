@@ -158,5 +158,33 @@
             </ngx-charts-gauge>
         </div>
     </div>
+    <div>
+        <div *ngIf="chart.bubble" class="col" [class]="theme">
+            <div class="row">
+                <h3>Bubble Chart</h3>
+            </div>
+            <div class="row">
+                <ngx-charts-bubble-chart class="chart-container"
+                    [view]="view"
+                    [scheme]="colorScheme"
+                    [results]="chart.bubble"
+                    [xAxis]="showXAxis"
+                    [yAxis]="showYAxis"
+                    [legend]="showLegend"
+                    [showXAxisLabel]="true"
+                    [showYAxisLabel]="true"
+                    [autoScale]="false"
+                    [minRadius]="minRadius"
+                    [maxRadius]="maxRadius"
+                    [trimXAxisTicks]="trimXAxisTicks"
+                    [trimYAxisTicks]="trimYAxisTicks"
+                    [maxXAxisTickLength]="maxXAxisTickLength"
+                    [maxYAxisTickLength]="maxYAxisTickLength"
+                    [xAxisLabel]="xLabelBubble"
+                    [yAxisLabel]="yLabelBubble">
+                </ngx-charts-bubble-chart>
+            </div>
+        </div>
+    </div>
 
 </div>

@@ -16,7 +16,7 @@ public class BubbleEntry implements Serializable {
 	 * x
 	 */
 	@ApiModelProperty(value = "x")
-	private double x;
+	private String x;
 
 	/**
 	 * y
@@ -32,9 +32,9 @@ public class BubbleEntry implements Serializable {
 
 	public BubbleEntry(String name, double x, double y){
 	    this.name = name;
-	    this.x = x;
-	    this.y = y;
-	    this.r = 0.5;
+	    this.x = name;
+	    this.y = x;
+	    this.r = y;
     }
 
 	/**
@@ -54,14 +54,14 @@ public class BubbleEntry implements Serializable {
 	/**
 	 * @return the x
 	 */
-	public double getX() {
+	public String getX() {
 		return x;
 	}
 
 	/**
 	 * @param x the x to set
 	 */
-	public void setX(double x) {
+	public void setX(String x) {
 		this.x = x;
 	}
 

@@ -56,6 +56,11 @@
                             <fa-icon icon="asterisk" fixedWidth="true"></fa-icon>
                             <span>Single charts</span>
                     </li>
+                    <li>
+                        <a class="dropdown-item" routerLink="chart/3" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                            <fa-icon icon="asterisk" fixedWidth="true"></fa-icon>
+                            <span>Bubble charts</span>
+                    </li>
                    <!-- jhipster-needle-add-chart-to-menu - JHipster will add chart to the menu here -->
                 </ul>
             </li>

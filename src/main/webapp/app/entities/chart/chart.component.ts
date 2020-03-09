@@ -77,8 +77,8 @@ export class ChartComponent implements OnInit, OnDestroy {
   barPadding = 8;
   groupPadding = 16;
   roundDomains = false;
-  maxRadius = 10;
-  minRadius = 3;
+  maxRadius = 40;
+  minRadius = 5;
   showSeriesOnHover = true;
   roundEdges = true;
   animations = true;
@@ -127,6 +127,10 @@ export class ChartComponent implements OnInit, OnDestroy {
   // heatmap
   heatmapMin = 0;
   heatmapMax = 50000;
+
+  // bubble
+  xLabelBubble = 'Year ';
+  yLabelBubble = 'Price Total';
 
   constructor(protected activatedRoute: ActivatedRoute) {
     this.colorSets = colorSets;
